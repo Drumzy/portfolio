@@ -1,0 +1,18 @@
+---
+import Hero from "../components/Hero.astro";
+import Menu from "../components/Menu.astro";
+import Layout from "../layouts/Layout.astro";
+---
+<script>
+  if (localStorage.getItem('color-theme') === "dark" || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)){
+    document.documentElement.classList.add('dark')
+  }else{
+    document.documentElement.classList.remove('dark')
+  }
+</script>
+<Layout title="My Portfolio">
+  <main class="bg-gray-200 dark:bg-gray-800 h-screen">
+    <Menu />
+    <Hero />
+  </main>
+</Layout>
