@@ -1,18 +1,24 @@
 ---
-import Hero from "../components/Hero.astro";
 import Menu from "../components/Menu.astro";
+import Email from "../components/Socials/Email.astro";
+import Github from "../components/Socials/Github.astro";
+import LinkedIn from "../components/Socials/LinkedIn.astro";
 import Layout from "../layouts/Layout.astro";
 ---
-<script>
-  if (localStorage.getItem('color-theme') === "dark" || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme:dark)').matches)){
-    document.documentElement.classList.add('dark')
-  }else{
-    document.documentElement.classList.remove('dark')
-  }
-</script>
+
 <Layout title="My Portfolio">
-  <main class="bg-gray-200 dark:bg-gray-800 h-screen">
+  <main class="bg-gray-200 dark:bg-gray-800 h-screen flex flex-col">
     <Menu />
-    <Hero />
+    <div class="flex flex-col w-full h-full justify-center items-center space-y-6">
+      <div class="flex flex-col justify-center items-center">
+            <h1 class="text-6xl font-bold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-[#00baff] to-[#063ef9] py-4">Wael Rassaa</h1>
+            <span class="text-xl font-medium text-gray-800 dark:text-gray-300">FullStack Developer </span>
+        </div>
+      <div class="flex flex-row">
+        <Github />
+        <Email />
+        <LinkedIn />
+      </div>
+    </div>
   </main>
 </Layout>
