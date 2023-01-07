@@ -11,8 +11,8 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content="FullStack Dev, Clean codebase enjoyer">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<script>
@@ -22,7 +22,7 @@ const { title } = Astro.props;
     document.documentElement.classList.remove('dark')
   }
 </script>
-	<body>
+	<body class="h-screen">
 		<slot />
 	</body>
 </html>

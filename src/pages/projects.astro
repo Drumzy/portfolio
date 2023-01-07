@@ -1,4 +1,6 @@
 ---
+import Footer from "../components/Footer.astro";
+import Loader from "../components/Loader.astro";
 import Menu from "../components/Menu.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -8,7 +10,11 @@ import Layout from "../layouts/Layout.astro";
     <main class="bg-gray-200 dark:bg-gray-800 h-screen flex flex-col">
         <Menu />
         <div class="flex w-full h-full justify-center items-center">
-            <span class="text-dark dark:text-white text-4xl">Comming Soon</span>
+            <div class="flex items-center justify-around w-2/3">
+                <span class="text-dark dark:text-white text-4xl">Coming Soon</span>
+                <Loader />
+            </div>
         </div>
+        <Footer />
     </main>
 </Layout>
